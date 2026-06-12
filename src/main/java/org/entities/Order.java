@@ -45,7 +45,9 @@ public class Order {
     }
 
     public double total() {
-        return products.stream().mapToDouble(Product::getPrice).sum();
+        return products.stream()
+                .mapToDouble(Product::getPrice)
+                .sum();
     }
 
     @Override
